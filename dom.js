@@ -16,10 +16,10 @@
 // console.log(document.images);
 
 // console.log(document.getElementById('header-title'));
-var headerTitle=document.getElementById('header-title').textContent = "Store Items";
-var headerTitle=document.getElementById('header-title').style.borderBottom='solid 3px #000';
-var main=document.getElementById('main').style.color='green';
-var main=document.getElementById('main').style.fontWeight='bold';
+// var headerTitle=document.getElementById('header-title').textContent = "Store Items";
+// var headerTitle=document.getElementById('header-title').style.borderBottom='solid 3px #000';
+// var main=document.getElementById('main').style.color='green';
+// var main=document.getElementById('main').style.fontWeight='bold';
 //console.log(headerTitle);
 // headerTitle.textContent='Hello';
 // headerTitle.innerText='GoodBye';
@@ -29,15 +29,15 @@ var main=document.getElementById('main').style.fontWeight='bold';
 //headerTitle
 
 // GET ELEMENT BY CLASS NAME
-// var items=document.getElementsByClassName('list-group-item');
-// console.log(items);
-// console.log(items[1]);
-// items[1].textContent='hello';
-// items.style.fontWeight='bold';
-// item[1].style.backgroundColor='yellow';
-// for(var i=0;i<items.length;i++){
-//     items[i].style.backgroundColor='yellow';
-// }
+var items=document.getElementsByClassName('list-group-item');
+console.log(items);
+console.log(items[1]);
+//items[1].textContent='hello';
+
+items[2].style.backgroundColor='green';
+for(var i=0;i<items.length;i++){
+    items[i].style.fontWeight='bold';
+}
 
 
 
