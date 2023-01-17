@@ -63,23 +63,98 @@
 // var item=document.querySelector('.list-group-item');
 // item.style.Color='red'
 
-var secondItem = document.querySelector('.list-group-item:nth-child(2)');
-secondItem.style.backgroundColor = 'green';
+// var secondItem = document.querySelector('.list-group-item:nth-child(2)');
+// secondItem.style.backgroundColor = 'green';
 
-var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
-thirdItem.style.display = "none";
+// var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+// thirdItem.style.display = "none";
 
-var title = document.querySelectorAll('.title');
-console.log(title);
-title[0].textContent = 'Hello';
-var odd = document.querySelectorAll('li:nth-child(odd)');
-for (var i = 0; i < odd.length; i++) {
-    odd[i].style.backgroundColor = 'green';
-}
-var second = document.querySelector('.list-group-item:nth-child(2)');
-second.style.color = "green";
-var third = document.querySelector('.list-group-item:nth-child(3)');
-third.style.display = "none";
+// var title = document.querySelectorAll('.title');
+// console.log(title);
+// title[0].textContent = 'Hello';
+// var odd = document.querySelectorAll('li:nth-child(odd)');
+// for (var i = 0; i < odd.length; i++) {
+//     odd[i].style.backgroundColor = 'green';
+// }
+// var second = document.querySelector('.list-group-item:nth-child(2)');
+// second.style.color = "green";
+// var third = document.querySelector('.list-group-item:nth-child(3)');
+// third.style.display = "none";
+
+// TRAVERSING THE DOM //
+//var itemList = document.querySelector('#items');
+// parentNode
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentNode.parentNode.parentNode);
+// var h1 = document.querySelector('#header-title');
+// h1.parentNode.textContent = 'HELLO Item Lister';
+// h1.style.fontSize = '100px';
+
+// // parentElement
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentElement.parentElement.parentElement);
+
+
+// // childNodes
+// // console.log(itemList.childNodes);
+// console.log(itemList.children);
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor = 'yellow';
+
+// // firstChild
+// console.log(itemList.firstChild);
+// // firstElementChild
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent = 'Hello';
+
+// // lastChild
+// console.log(itemList.lastChild);
+// // lastElementChild
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent = 'Hello';
+
+// // nextSibling
+// console.log(itemList.nextSibling);
+// // nextElementSibling
+// console.log(itemList.nextElementSibling);
+
+// // previousSibling
+// console.log(itemList.previousSibling);
+// // previousElementSibling
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color = 'green';
+
+
+// createElement
+// create a div
+// var newDiv = document.createElement('div');
+// // newDiv.className = 'hello'; // add class
+// // newDiv.id = 'hello1'; // add id
+// // newDiv.setAttribute('title','Hello Div'); // add attribute
+// //create a text Node
+// var newDivText = document.createTextNode('Hello World');
+// newDiv.appendChild(newDivText); // add text to div
+// var container = document.querySelector('header .container');
+// var h1 = document.querySelector('header h1');
+// h1.appendChild('HELLO');
+// console.log(newDiv);
+// newDiv.style.fontSize = '30px';
+
+// console.log(newDiv,h1);
+
+// var addHead = document.createElement('h1');
+// var textAdd = document.createTextNode('Hello');
+// addHead.appendChild(textAdd);
+// var head = document.getElementById("main-header");
+// head.insertBefore(addHead,head);
+
+var addItem = document.createElement('li');
+var addText = document.createTextNode('Hello');
+addItem.appendChild(addText);
+var list = document.getElementById("items");
+list.insertBefore(addItem,list.children[0]);
 
 
 
