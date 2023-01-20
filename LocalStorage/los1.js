@@ -6,7 +6,6 @@ function saveToLocalStorage(event) {
     // localStorage.setItem('name', name);
     // localStorage.setItem('email', email);
     // localStorage.setItem('phonenumber', phonenumber);
-
 const obj = {
     name,
     email,
@@ -20,16 +19,16 @@ document.getElementById('mail').value = '';
 document.getElementById('number').value = '';
 }
 function showNewUserOnScreen(obj){
-const parentItem = document.getElementById('listOfUsers')
-const childItem = document.createElement('li')
-childItem.textContent = obj.name + " - " + obj.email + " - " + obj.phonenumber;
-
-
-const deleteBtn = document.createElement('input');
-deleteBtn.type = 'button';
-deleteBtn.value = 'Delete';
-deleteBtn.onclick = () => {
-    localStorage.removeItem(obj.email);
-    parentItem.removeChild(childItem);
-}
+    const parentItem = document.getElementById('listOfUsers')
+    const childItem = document.createElement('li')
+    childItem.textContent = obj.name + " - " + obj.email + " - " + obj.phonenumber;
+    
+    
+    const deleteBtn = document.createElement('input');
+    deleteBtn.type = 'button';
+    deleteBtn.value = 'Delete';
+    deleteBtn.onclick = () => {
+        localStorage.removeItem(obj.email);
+        parentItem.removeChild(childItem);
+    }
 }
