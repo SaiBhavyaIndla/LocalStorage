@@ -19,5 +19,14 @@ function showNewUserOnScreen(obj){
     const parentItem = document.getElementById('listOfUsers')
     const childItem = document.createElement('li')
     childItem.textContent = obj.name + " - " + obj.email + " - " + obj.phonenumber;
+
+    const deleteBtn = document.createElement('input');
+    deleteBtn.type = 'button';
+    deleteBtn.value = 'Delete';
+    deleteBtn.onclick = () => {
+        localStorage.removeItem(obj.email);
+        parentItem.removeChild(childItem);
+    }
+    childItem.appendChild(deleteBtn);
     parentItem.appendChild(childItem);
 }
