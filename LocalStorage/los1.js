@@ -27,6 +27,20 @@ function showNewUserOnScreen(obj){
         localStorage.removeItem(obj.email);
         parentItem.removeChild(childItem);
     }
+
+    const editBtn = document.createElement('input');
+    editBtn.type = 'button';
+    editBtn.value = 'Edit';
+    editBtn.onclick = () => {
+        document.querySelector('input[type="text"]').value  = obj.name;
+        document.querySelector('input[type="email"]').value  = obj.email;
+        document.querySelector('input[type="tel"]').value  = obj.phonenumber;
+        localStorage.removeItem(obj.email);
+        parentItem.removeChild(childItem);
+
+    }
+    
     childItem.appendChild(deleteBtn);
+    childItem.appendChild(editBtn);
     parentItem.appendChild(childItem);
 }
